@@ -1,5 +1,6 @@
 #include "DxLib.h"
 #include "SceneMain.h"
+#include "enemy.h"
 
 SceneMain::SceneMain()
 {
@@ -19,6 +20,9 @@ void SceneMain::init()
 
 	m_player.setHandle(m_hPlayerGraphic);
 	m_player.init();
+	
+	m_enemy.setHandle(m_hPlayerGraphic);
+	m_enemy.init();
 
 	for (auto& shot : m_shot)
 	{
@@ -37,6 +41,7 @@ void SceneMain::end()
 void SceneMain::update()
 {
 	m_player.update();
+	m_enemy.update();
 	for (auto& shot : m_shot)
 	{
 		shot.update();
@@ -53,6 +58,7 @@ void SceneMain::update()
 void SceneMain::draw()
 {
 	m_player.draw();
+	m_enemy.draw();
 
 	for (auto& shot : m_shot)
 	{
