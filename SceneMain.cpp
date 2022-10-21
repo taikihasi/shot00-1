@@ -1,6 +1,5 @@
 #include "DxLib.h"
 #include "SceneMain.h"
-#include "enemy.h"
 
 SceneMain::SceneMain()
 {

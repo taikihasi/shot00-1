@@ -32,7 +32,7 @@ private:
 	// プレイヤー
 	Player m_player;
 	// 敵
-	Enemy m_player;
+	Enemy m_enemy;
 	// ショット
 	Shot m_shot[kShotMax];
 };
